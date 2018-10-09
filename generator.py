@@ -1,7 +1,7 @@
 import json
 import random
 
-card_amount = 12
+card_amount = int(input("How many players will there be? "))
 card_min = 1
 card_max = 99
 
@@ -17,7 +17,7 @@ def generateRandomCard(minimum, maximum):
         number = random.randint(minimum, maximum)
         if number not in card:
             card.append(number)
-            
+
     card.sort()
     return card
 
