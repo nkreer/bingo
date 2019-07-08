@@ -26,3 +26,8 @@ Takes the contents of ```cards.json``` and outputs a nicely formatted ```cards.h
 
 This script draws the numbers 1-99 in random order.
 It also shows you information about the cards in ```cards.json``` in a table.
+
+## cards2printer.py
+
+Same as cards2html.py, but prints them to a thermal printer using [python-escpos](https://github.com/python-escpos/python-escpos)
+

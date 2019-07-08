@@ -64,6 +64,9 @@ for number in numbers:
 
     table.refresh()
 
+    # Keep track of the numbers already called out
+    called_out.append(number)
+
     # Save the already called out numbers to a file for reference
     called_out_file = open("called.txt", "w+")
     called_out_file.write(str(called_out))
@@ -72,9 +75,6 @@ for number in numbers:
     stdscr.addstr(screen_height - 1, 0, "Current number: " + str(number) + " || Remaining draws: " + str(len(numbers) - len(called_out)))
 
     stdscr.getch()
-
-    # Keep track of the numbers already called out
-    called_out.append(number)
 
 curses.nocbreak()
 stdscr.keypad(False)
