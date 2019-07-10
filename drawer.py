@@ -32,6 +32,9 @@ called_out = []
 
 # Call out the numbers
 for number in numbers:
+
+    called_out.append(number)
+
     # Draw out the player table along with their line information
     table = Table(stdscr, len(cards), len(lines) + 1, 4, screen_width, screen_height - 2, spacing=1, col_names=True)
 
@@ -63,9 +66,6 @@ for number in numbers:
             line_index += 1
 
     table.refresh()
-
-    # Keep track of the numbers already called out
-    called_out.append(number)
 
     # Save the already called out numbers to a file for reference
     called_out_file = open("called.txt", "w+")
